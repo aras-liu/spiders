@@ -1,7 +1,7 @@
 name: 测试工作流
 on: workflow_dispatch
 jobs:
-  run_demo_action:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: CheckoutCode
