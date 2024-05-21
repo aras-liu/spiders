@@ -12,9 +12,9 @@ jobs:
       with:
         python-version: '3.9'
 
-    - name: InstallReqireMent
-      run:
-        pip install -r ./requirement.txt
+    #- name: InstallReqireMent
+    #  run:
+    #    pip install -r ./requirement.txt
 
     - name: RunMain
       run: python main.py
