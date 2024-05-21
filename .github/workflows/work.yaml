@@ -1,2 +1,21 @@
 name: 测试工作流
-on: push
+on: workflow_dispatch
+jobs:
+  run_demo_action:
+    runs-on: ubuntu-latest
+    steps:
+    - name: CheckoutCode
+      uses: actions/checkout@v3
+
+    - name: SetupPython
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+
+    - name: InstallReqireMent
+      run:
+        pip install -r ./requirement.txt
+
+    - name: RunMain
+      run: python main.py
+  
