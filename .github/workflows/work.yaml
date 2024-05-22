@@ -3,16 +3,16 @@ on:
   schedule: 
     - cron : '00 22 * * *'
   workflow_dispatch:
-  
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - name: CheckoutCode
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: SetupPython
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v3
       with:
         python-version: '3.9'
 
@@ -22,4 +22,4 @@ jobs:
 
     - name: RunMain
       run: python wxsport.py
-  
+
