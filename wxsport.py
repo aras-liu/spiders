@@ -90,7 +90,7 @@ def modifyStep(mobile,mypwd):
     code = getcode(mobile, mypwd)
     userid, login_token = getAccessToken(code)
     app_token = getAppToken(login_token)
-    
+
     step = str(random.randint(min_step, max_step))
     print(f'random {min_step}~{max_step}, set step= {step}')
 
@@ -131,4 +131,7 @@ if __name__ == '__main__':
     passwd2 = os.environ.get("PASSWD_2")
 
     modifyStep(iphone1,passwd1)
+    print("user1 update done")
+    time.sleep(10)
     modifyStep(iphone1,passwd2)
+    print("user2 update done")
