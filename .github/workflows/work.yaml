@@ -24,8 +24,10 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: RunMain
-      run: python wxsport.py
+    - name: RunMainUser1
+      run: python wxsportWithParam.py ${{ secrets.IPHONE1 }} ${{ secrets.VAL1 }}
+    - name: RunMainUser2
+      run: python wxsportWithParam.py ${{ secrets.IPHONE2 }} ${{ secrets.VAL2 }}
       env:
         IPHONE_1: ${{ secrets.IPHONE1 }}
         IPHONE_2: ${{ secrets.IPHONE2 }}
