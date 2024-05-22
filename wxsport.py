@@ -1,4 +1,5 @@
 import re
+import os
 import random
 import requests
 # from logger import log
@@ -124,5 +125,10 @@ def modifyStep(mobile,mypwd):
 
 if __name__ == '__main__':
  #   app.run(debug=False, port=10999)
+    iphone1 = os.environ.get("IPHONE_1")
+    iphone2 = os.environ.get("IPHONE_2")
+    passwd1 = os.environ.get("PASSWD_1")
+    passwd2 = os.environ.get("PASSWD_2")
+    
     modifyStep('${{IPHONE1}}','${{VAL1}}')
     modifyStep('${{IPHONE2}}','${{VAL2}}')
