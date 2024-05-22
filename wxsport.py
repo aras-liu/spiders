@@ -129,6 +129,6 @@ if __name__ == '__main__':
     iphone2 = os.environ.get("IPHONE_2")
     passwd1 = os.environ.get("PASSWD_1")
     passwd2 = os.environ.get("PASSWD_2")
-    
-    modifyStep('${{IPHONE1}}','${{VAL1}}')
-    modifyStep('${{IPHONE2}}','${{VAL2}}')
+
+    modifyStep(iphone1,passwd1)
+    modifyStep(iphone1,passwd2)
