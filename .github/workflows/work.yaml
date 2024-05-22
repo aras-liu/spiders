@@ -27,8 +27,8 @@ jobs:
     - name: RunMain
       run: python wxsport.py
       env:
-        IPHONE_1: ${{IPHONE1}}
-        IPHONE_2: ${{IPHONE2}}
-        PASSWD_1: ${{VAL1}}
-        PASSWD_2: ${{VAL2}}
+        IPHONE_1: ${{ secrets.IPHONE1 }}
+        IPHONE_2: ${{ secrets.IPHONE2 }}
+        PASSWD_1: ${{ secrets.VAL1 }}
+        PASSWD_2: ${{ secrets.VAL2 }}
 
