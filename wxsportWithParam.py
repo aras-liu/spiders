@@ -55,7 +55,7 @@ def getAccessToken(code):
     try:
         res = requests.post(url, headers=headers, data=data, allow_redirects=False)
         token_info = res.json().get('token_info')
-        # print(f'获取AccessToken成功 token: {token_info}')
+        print(f'获取AccessToken成功 token: {token_info}')
         return token_info['user_id'], token_info['login_token']
     except Exception as e:
         print(f"get AccessToken failed: {e}")
@@ -122,7 +122,7 @@ def modifyStep(mobile,mypwd):
     data = f'userid={userid}&last_sync_data_time=1597306380&device_type=0&last_deviceid=DA932FFFFE8816E7&data_json={data_json}'
     try:
         response = requests.post(url, data=data, headers=head).json()
-        print(f'{mobile} modify step success')
+        print(f'{mobile} modify step success {response}')
         status["status"] = "success"
         return status
     except Exception as e:
